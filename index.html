@@ -1,80 +1,85 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Ruex64 — Domain Test</title>
-    <meta name="description" content="Simple self-check page to verify DNS, SSL, and Cloudflare status for test.ruex64.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Sansita+One&family=Jersey+25&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="./styles.css" />
-  </head>
-  <body>
-    <main class="wrap">
-      <header class="hero" role="banner" aria-label="Brand">
-        <h1 class="brand" aria-label="Ruex64">
-          Ru<span class="accent">e</span>x<span class="accent-dot">64</span>
-        </h1>
-        <p class="tag">Domain&nbsp;Test</p>
-      </header>
 
-      <section class="card" aria-labelledby="status-title">
-        <h2 id="status-title" class="visually-hidden">Status</h2>
-        <div class="grid">
-          <div class="kv">
-            <span class="k">Status</span>
-            <span id="status" class="v badge">Loading…</span>
-          </div>
-          <div class="kv">
-            <span class="k">Hostname</span>
-            <span id="host" class="v mono"></span>
-          </div>
-          <div class="kv">
-            <span class="k">Protocol</span>
-            <span id="protocol" class="v mono"></span>
-          </div>
-          <div class="kv">
-            <span class="k">Cloudflare</span>
-            <span id="cf" class="v mono"></span>
-          </div>
-          <div class="kv">
-            <span class="k">Datacenter</span>
-            <span id="colo" class="v mono"></span>
-          </div>
-          <div class="kv">
-            <span class="k">TLS</span>
-            <span id="tls" class="v mono"></span>
-          </div>
-          <div class="kv">
-            <span class="k">HTTP</span>
-            <span id="httpver" class="v mono"></span>
-          </div>
-          <div class="kv">
-            <span class="k">Your IP</span>
-            <span id="ip" class="v mono"></span>
-          </div>
-          <div class="kv">
-            <span class="k">Cache</span>
-            <span id="cache" class="v mono"></span>
-          </div>
-          <div class="kv">
-            <span class="k">Ray ID</span>
-            <span id="ray" class="v mono"></span>
-          </div>
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Ruex64 — Domain Test</title>
+  <meta name="description"
+    content="Simple self-check page to verify DNS, SSL, and Cloudflare status for test.ruex64.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Sansita+One&family=Jersey+25&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./styles.css" />
+</head>
+
+<body>
+  <main class="wrap">
+    <header class="hero" role="banner" aria-label="Brand">
+      <h1 class="brand" aria-label="Ruex64">
+        Rue<span class="x-orange">x</span><span class="accent-dot">64</span>
+      </h1>
+
+      <p class="tag">Domain&nbsp;Test</p>
+    </header>
+
+    <section class="card" aria-labelledby="status-title">
+      <h2 id="status-title" class="visually-hidden">Status</h2>
+      <div class="grid">
+        <div class="kv">
+          <span class="k">Status</span>
+          <span id="status" class="v badge">Loading…</span>
         </div>
-
-        <div class="actions">
-          <button id="run" class="btn" type="button" aria-label="Run tests">Run tests</button>
-          <button id="copy" class="btn outline" type="button" aria-label="Copy diagnostics">Copy report</button>
+        <div class="kv">
+          <span class="k">Hostname</span>
+          <span id="host" class="v mono"></span>
         </div>
-        <p class="hint mono">If you can load this at <span id="origin-url"></span>, DNS + SSL are working.</p>
-      </section>
+        <div class="kv">
+          <span class="k">Protocol</span>
+          <span id="protocol" class="v mono"></span>
+        </div>
+        <div class="kv">
+          <span class="k">Cloudflare</span>
+          <span id="cf" class="v mono"></span>
+        </div>
+        <div class="kv">
+          <span class="k">Datacenter</span>
+          <span id="colo" class="v mono"></span>
+        </div>
+        <div class="kv">
+          <span class="k">TLS</span>
+          <span id="tls" class="v mono"></span>
+        </div>
+        <div class="kv">
+          <span class="k">HTTP</span>
+          <span id="httpver" class="v mono"></span>
+        </div>
+        <div class="kv">
+          <span class="k">Your IP</span>
+          <span id="ip" class="v mono"></span>
+        </div>
+        <div class="kv">
+          <span class="k">Cache</span>
+          <span id="cache" class="v mono"></span>
+        </div>
+        <div class="kv">
+          <span class="k">Ray ID</span>
+          <span id="ray" class="v mono"></span>
+        </div>
+      </div>
 
-      <footer class="foot">
-        <p class="mono small">© <span id="yr"></span> Ruex64 — minimal test page</p>
-      </footer>
-    </main>
+      <div class="actions">
+        <button id="run" class="btn" type="button" aria-label="Run tests">Run tests</button>
+        <button id="copy" class="btn outline" type="button" aria-label="Copy diagnostics">Copy report</button>
+      </div>
+      <p class="hint mono">If you can load this at <span id="origin-url"></span>, DNS + SSL are working.</p>
+    </section>
 
-    <script src="./script.js" defer></script>
-  </body>
+    <footer class="foot">
+      <p class="mono small">© <span id="yr"></span> Ruex64 — minimal test page</p>
+    </footer>
+  </main>
+
+  <script src="./script.js" defer></script>
+</body>
+
 </html>

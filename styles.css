@@ -146,3 +146,7 @@ body{
 .small{font-size:.875rem}
 
 .foot{opacity:.7; margin-top:.5rem; text-align:center}
+
+
+/* force white x */
+.brand .x-orange { color: var(--accent) !important; }
